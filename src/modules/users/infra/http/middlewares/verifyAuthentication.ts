@@ -14,7 +14,7 @@ const verifyAuthentication = (
   request: Request,
   response: Response,
   next: NextFunction,
-): any => {
+): void => {
   const { authorization } = request.headers;
 
   if (!authorization) {

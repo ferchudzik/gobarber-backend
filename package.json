@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --ignore-watch node_modules --no-notify src/shared/infra/http/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --inspect --ignore-watch node_modules --no-notify src/shared/infra/http/server.ts",
     "start": "ts-node src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "jest"
@@ -20,6 +20,7 @@
     "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
     "pg": "^8.0.0",
     "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.3.0",
@@ -35,6 +36,7 @@
     "@types/jest": "^26.0.3",
     "@types/jsonwebtoken": "^8.3.9",
     "@types/multer": "^1.4.3",
+    "@types/nodemailer": "^6.4.0",
     "@types/supertest": "^2.0.8",
     "@types/uuidv4": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
