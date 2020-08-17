@@ -19,6 +19,7 @@ describe('ListProviderMonthAvailability', () => {
   it('should list the month availability from a provider', async () => {
     await fakeAppointmentsRepository.create({
       providerId: '123123123',
+      userId: '321321321',
       date: new Date(2020, 6, 15, 8, 0, 0),
     });
 
@@ -28,6 +29,7 @@ describe('ListProviderMonthAvailability', () => {
       promisesArray.push(
         fakeAppointmentsRepository.create({
           providerId: '123123123',
+          userId: '321321321',
           date: new Date(2020, 7, 15, i, 0, 0),
         }),
       );
@@ -37,6 +39,7 @@ describe('ListProviderMonthAvailability', () => {
 
     await fakeAppointmentsRepository.create({
       providerId: '123123123',
+      userId: '321321321',
       date: new Date(2020, 6, 16, 10, 0, 0),
     });
 
