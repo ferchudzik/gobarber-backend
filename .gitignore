@@ -4,9 +4,12 @@ node_modules/
 build/
 temp/
 coverage/
+ormconfig.json
 
 tmp/*
 !tmp/.gitkeep
 
 *.lock
 *.log
+
+.env

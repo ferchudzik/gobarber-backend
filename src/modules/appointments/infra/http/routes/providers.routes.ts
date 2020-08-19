@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { celebrate, Segments, Joi } from 'celebrate';
 
 import verifyAuthentication from '@modules/users/infra/http/middlewares/verifyAuthentication';
 import ProvidersController from '../controllers/ProvidersController';
@@ -15,10 +16,20 @@ providersRouter.use(verifyAuthentication);
 providersRouter.get('/', providersController.find);
 providersRouter.get(
   '/:providerId/day-availability',
+  celebrate({
+    [Segments.PARAMS]: {
+      providerId: Joi.string().uuid().required(),
+    },
+  }),
   providerDayAvailabilityController.find,
 );
 providersRouter.get(
   '/:providerId/month-availability',
+  celebrate({
+    [Segments.PARAMS]: {
+      providerId: Joi.string().uuid().required(),
+    },
+  }),
   providerMonthAvailabilityController.find,
 );
 
